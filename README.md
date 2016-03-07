@@ -1,4 +1,6 @@
-# bitpocket
+# bitpocket v2
+
+
 
 [![Build Status](https://secure.travis-ci.org/sickill/bitpocket.png?branch=master)](http://travis-ci.org/sickill/bitpocket)
 
@@ -81,27 +83,23 @@ they will be detected as added.
 
 ### Maintaining backups (bitpocket pack)
 
-bitpocket does not include a full-fledged versioning system at the moment, but
-it does automatically create a local backup of any files before overwriting or 
-deleting with changes from the BitPocketMaster. These backups are placed into a 
-timestamped directory (one directory per sync). The path to this directory is:
+bitpocket2 does include a full-fledged versioning system it does automatically create 
+a local backup of any files before overwriting or deleting with changes from the BitPocketMaster.
+These backups are placed into a timestamped directory (one directory per sync). The path to this directory is:
 
     .bitpocket/backups/YYYY-MM-DD.hhmmss
 
-As these files accumulate, you may want to remove them, but you can also run
-`bitpocket pack` to combine all the backup files into a git repository contained
-within the _.bitpocket_ directory:
+As these files accumulate, you may want to remove them, but you can also run `bitpocket pack`
+to combine all the backup files into a git annex repository contained within the _.bitpocket_ directory:
 
     $ cd ~/BitPocket
     $ bitpocket pack
 
-This requires an installation of _git_, but
-allows all the space saving advantages of _git_ when making repeated changes
-to the same files.
+This requires an installation of _git_ and _git-annex_ but allows all the space saving advantages of _git_ 
+when making repeated changes to the same files.
 
 There is a discussion about potential directions for versioning direction here:
 [github.com/sickill/bitpocket/issues/15](https://github.com/sickill/bitpocket/issues/15)
-
 
 ### Redirecting output to log file (bitpocket cron)
 
@@ -115,7 +113,6 @@ output to a log file:
 As the name of this parameter implies, this is mainly useful when running bitpocket
 through the _cron_ command. (See "Automatic sync with cron" for more information 
 about how to configure this).
-
 
 ### Displaying logs (bitpocket log)
 
@@ -227,5 +224,6 @@ You can show tray icon during long sync with
 
 ## Author
 
+* Frank Lemanschik | @franklemanschik | http://dspeed.eu
 * Marcin Kulik | @sickill | https://github.com/sickill | http://ku1ik.com/
 * torfason | https://github.com/torfason
